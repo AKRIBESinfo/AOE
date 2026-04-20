@@ -11,8 +11,8 @@ AOE is a structured filesystem and CLI framework for managing BIM project data, 
 
 ## Core Commands
 
-  AOE
-  AOE --check
+  AOE; 
+  AOE --check; 
   AOE --apply
 
 ## Philosophy
