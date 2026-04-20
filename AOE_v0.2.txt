@@ -1,0 +1,247 @@
+AOE v0.2
+Akribes Operating Environment
+
+----------------------------------------
+PURPOSE
+----------------------------------------
+
+AOE v0.2 extends AOE v0.1 by introducing a lightweight CLI and
+automation layer through WSL2 and Python.
+
+The goal is to:
+- preserve the AOE v0.1 structure and naming standards
+- provide a single command interface for system interaction
+- support validation, observation, and controlled correction
+- prepare the environment for future agent-driven workflows
+
+----------------------------------------
+ROOT DIRECTORY
+----------------------------------------
+
+C:\AK
+
+----------------------------------------
+SYSTEM FOLDERS
+----------------------------------------
+
+C:\AK\BIN   = command scripts and Windows-side tools
+C:\AK\PRJ   = project directories
+C:\AK\LOG   = global logs and generated reports
+C:\AK\AG    = automation / agent layer
+
+----------------------------------------
+PROJECT CODE STANDARD
+----------------------------------------
+
+Format:
+CLIENTYYNN
+
+Example:
+SAM2600
+
+----------------------------------------
+FILENAME STANDARD
+----------------------------------------
+
+Format:
+PROJECTCODE_TYPESEQ_YYMMDD.ext
+
+Examples:
+SAM2600_DRW001_260419.pdf
+SAM2600_EST001_260419.xlsx
+SAM2600_NWC001_260419.nwc
+SAM2600_IMG001_260419.jpg
+
+Definitions:
+TYPE   = deliverable identifier
+SEQ    = 3-digit sequence (001, 002, ...)
+YYMMDD = date of creation
+
+----------------------------------------
+PROJECT STRUCTURE
+----------------------------------------
+
+PROJECTCODE\
+├── IMP\
+│   ├── RAW\
+│   └── REF\
+├── EXP\
+│   ├── DRW\
+│   ├── EST\
+│   ├── COORD\
+│   ├── RFI\
+│   ├── SUB\
+│   ├── IMG\
+│   └── MISC\
+└── PROJECT_INFO.txt
+
+----------------------------------------
+DATA MODEL
+----------------------------------------
+
+IMP = preserved input data
+RAW = untouched incoming files
+REF = curated reference files kept in original naming
+
+EXP = structured deliverable outputs
+All files in EXP must follow AOE naming standards
+
+----------------------------------------
+DELIVERABLE FOLDER DEFINITIONS
+----------------------------------------
+
+DRW   = drawings
+EST   = estimates
+COORD = coordination files (Navisworks: NWC, NWD, NWF)
+RFI   = request-for-information documents
+SUB   = submittals and compiled packages
+IMG   = imagery, scans, LiDAR, renderings, photos
+MISC  = uncommon or overflow deliverables
+
+----------------------------------------
+NAMING CONVENTIONS
+----------------------------------------
+
+SYSTEM STRUCTURE:
+All AOE folders use UPPERCASE.
+
+Examples:
+AK, PRJ, IMP, EXP, DRW, EST
+
+DELIVERABLE FILES:
+All generated files follow:
+PROJECTCODE_TYPESEQ_YYMMDD.ext
+
+TYPE codes are UPPERCASE.
+
+TOOLS / SCRIPTS:
+All script and command file names use lowercase.
+
+Examples:
+newproj.ps1
+newfile.ps1
+
+CLI COMMAND:
+The primary Linux-side command interface is:
+AOE
+
+Examples:
+AOE
+AOE --check
+AOE --project SAM2600
+AOE --project SAM2600 --check
+AOE --apply --dry-run
+AOE --apply --session <token>
+
+This creates a visual distinction between:
+- system structure (UPPERCASE)
+- actions/tools (lowercase)
+- command interface (AOE)
+
+----------------------------------------
+AOE v0.2 CLI LAYER
+----------------------------------------
+
+AOE v0.2 introduces a unified CLI through WSL2 and Python.
+
+WSL2 PATH TO AOE:
+  /mnt/c/AK
+
+Primary script location:
+  /mnt/c/AK/AG/scripts/AOE.py
+
+Primary command:
+  AOE
+
+----------------------------------------
+CLI FUNCTIONALITY
+----------------------------------------
+
+AOE
+  Displays a high-level project summary
+
+AOE --files
+  Displays summary plus file listings
+
+AOE --check
+  Validates deliverable naming and folder alignment
+
+AOE --project PROJECTCODE
+  Limits summary to a single project
+
+AOE --project PROJECTCODE --check
+  Limits validation to a single project
+
+AOE --apply --dry-run
+  Shows safe folder realignment actions without making changes
+
+AOE --apply --session TOKEN
+  Applies only the exact safe moves approved by the prior dry-run
+
+----------------------------------------
+SYSTEM BEHAVIOR
+----------------------------------------
+
+- AOE defines the structured data layer for Akribes
+- AOE governs how external platforms interface with project data
+- Original external files are preserved in IMP
+- Structured outputs are placed in EXP
+- AOE CLI is read-first and correction-second
+- Automatic correction is intentionally limited and conservative
+- Invalidly named files are reported, not automatically renamed
+
+----------------------------------------
+AOE v0.2 ARCHITECTURE
+----------------------------------------
+
+INTERFACE LAYER
+  User device and shell access
+
+WINDOWS LAYER
+  Autodesk applications and C:\AK
+
+AOE DATA LAYER
+  Structured folders, naming, and project data
+
+WSL2 / PYTHON LAYER
+  Validation, reporting, and controlled automation
+
+ARCHIVE / STORAGE LAYER
+  AKserver, external storage, and future archival workflows
+
+----------------------------------------
+DESIGN PHILOSOPHY
+----------------------------------------
+
+AOE should remain:
+- lightweight
+- deterministic
+- predictable
+- agent-compatible
+
+AOE is not intended to replace judgment.
+It is intended to provide clear structure, observability,
+and safe system behavior.
+
+Future agentic workflows should operate through AOE,
+not around it.
+
+----------------------------------------
+STATUS
+----------------------------------------
+
+AOE v0.2 is the first operational CLI-based evolution of AOE.
+
+It establishes:
+- AOE v0.1 structure as the foundation
+- WSL2 as the automation layer
+- Python-based validation and reporting
+- a unified command interface through AOE
+- safe, session-based controlled correction
+
+Future versions may expand:
+- ingestion
+- reporting outputs
+- project-specific automation
+- agent orchestration
+

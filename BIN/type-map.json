@@ -1,0 +1,46 @@
+{
+  "PDF": {
+    "description": "Drawing sheets (PDF exports)",
+    "extension": "pdf"
+  },
+  "NWC": {
+    "description": "Navisworks cache export",
+    "extension": "nwc"
+  },
+  "NWD": {
+    "description": "Navisworks deliverable file",
+    "extension": "nwd"
+  },
+  "EST": {
+    "description": "Estimate files",
+    "extension": "xlsx"
+  },
+  "RPT": {
+    "description": "Reports and summaries",
+    "extension": "docx"
+  },
+  "LOG": {
+    "description": "Logs and notes",
+    "extension": "txt"
+  },
+  "IMG": {
+    "description": "Images and screenshots",
+    "extension": "png"
+  },
+  "SUB": {
+    "description": "Submittals",
+    "extension": "pdf"
+  },
+  "CUT": {
+    "description": "Cutsheets",
+    "extension": "pdf"
+  },
+  "DRW": {
+    "description": "Drawing packages / combined sets",
+    "extension": "pdf"
+  },
+  "MOD": {
+    "description": "Model-related files (Revit, etc.)",
+    "extension": "rvt"
+  }
+}

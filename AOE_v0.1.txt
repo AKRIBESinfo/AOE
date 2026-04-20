@@ -1,0 +1,164 @@
+AOE v0.1
+Akribes Operating Environment
+
+----------------------------------------
+PURPOSE
+----------------------------------------
+
+AOE (Akribes Operating Environment) defines a structured, command-driven
+system for managing project data, deliverables, and workflows.
+
+The goal is to:
+- standardize project organization
+- preserve original data
+- enforce consistent deliverable naming
+- enable automation and future AI-agent workflows
+
+----------------------------------------
+ROOT DIRECTORY
+----------------------------------------
+
+C:\AK
+
+----------------------------------------
+SYSTEM FOLDERS
+----------------------------------------
+
+C:\AK\BIN   = command scripts and tools
+C:\AK\PRJ   = project directories
+C:\AK\LOG   = global logs (optional / future use)
+C:\AK\AG    = agent / automation layer (future)
+
+----------------------------------------
+PROJECT CODE STANDARD
+----------------------------------------
+
+Format:
+CLIENTYYNN
+
+Example:
+SAM2600
+
+----------------------------------------
+FILENAME STANDARD
+----------------------------------------
+
+Format:
+PROJECTCODE_TYPESEQ_YYMMDD.ext
+
+Examples:
+SAM2600_DRW001_260419.pdf
+SAM2600_EST001_260419.xlsx
+SAM2600_NWC001_260419.nwc
+SAM2600_IMG001_260419.jpg
+
+Definitions:
+TYPE = deliverable type (UPPERCASE)
+SEQ  = 3-digit sequence (001, 002, ...)
+YYMMDD = date of creation
+
+----------------------------------------
+PROJECT STRUCTURE
+----------------------------------------
+
+PROJECTCODE\
+├── IMP\
+│   ├── RAW\
+│   └── REF\
+├── EXP\
+│   ├── DRW\
+│   ├── EST\
+│   ├── COORD\
+│   ├── RFI\
+│   ├── SUB\
+│   ├── IMG\
+│   └── MISC\
+└── PROJECT_INFO.txt
+
+----------------------------------------
+DATA MODEL
+----------------------------------------
+
+IMP = preserved input data
+RAW = untouched incoming files (downloads, client files)
+REF = curated reference files (submittals, vendor data)
+
+EXP = structured deliverable outputs
+All files in EXP must follow AOE naming standards
+
+----------------------------------------
+DELIVERABLE FOLDER DEFINITIONS
+----------------------------------------
+
+DRW   = drawings (PDF sheet sets, plot exports)
+EST   = estimates (Excel, PDF summaries)
+COORD = coordination files (Navisworks: NWC, NWD, NWF)
+RFI   = request-for-information documents
+SUB   = submittals and compiled packages
+IMG   = imagery (photos, renderings, LiDAR, scans)
+MISC  = uncommon or overflow deliverables
+
+----------------------------------------
+NAMING CONVENTIONS
+----------------------------------------
+
+SYSTEM STRUCTURE:
+All AOE folders use UPPERCASE.
+
+Examples:
+AK, PRJ, IMP, EXP, DRW, EST
+
+DELIVERABLE FILES:
+All generated files follow:
+PROJECTCODE_TYPESEQ_YYMMDD.ext
+
+TYPE codes are UPPERCASE.
+
+TOOLS / SCRIPTS:
+All scripts use lowercase naming.
+
+Examples:
+newproj.ps1
+newfile.ps1
+
+This creates a visual distinction between:
+- system structure (UPPERCASE)
+- actions/tools (lowercase)
+
+----------------------------------------
+COMMAND USAGE
+----------------------------------------
+
+Create project:
+newproj SAM2600
+
+Create deliverable file:
+newfile SAM2600 DRW
+
+----------------------------------------
+SYSTEM BEHAVIOR
+----------------------------------------
+
+- Original files are preserved in IMP
+- Deliverables are created in EXP
+- EXP files are standardized using the AOE naming convention
+- AOE defines how external platforms (e.g., ACC, OneDrive) interface with project data and deliverables.
+- External tools may be used for production work, but all finalized outputs must conform to AOE structure and naming standards.
+
+IMPORTED FILE HANDLING:
+Files received from external sources should generally retain their original names in IMP.
+Only files intentionally produced, transformed, or formalized by Akribes should be renamed into AOE-standard deliverable format within EXP.
+
+----------------------------------------
+STATUS
+----------------------------------------
+
+AOE v0.1 is the first operational version of the Akribes
+command-driven environment.
+
+It establishes:
+- folder structure
+- naming conventions
+- foundational tooling
+
+Future versions will expand automation and agent integration.
