@@ -1,0 +1,96 @@
+**AKRIBES OPERATING ENVIRONMENT (AOE)**
+*Positioning Akribes for the Digital Twin Era*
+
+AOE is Akribes’ internal and client-facing framework for structuring, validating, and managing BIM project data across its full lifecycle.
+
+While BIM tools focus on creating models, AOE focuses on **how information is organized, governed, and sustained**. It transforms project data from a collection of disconnected files into a **controlled, observable system**.
+
+This distinction is critical.
+
+---
+
+**The Industry Problem**
+
+The AEC industry has made significant progress in 3D modeling, coordination, and visualization. However, most projects still struggle with:
+
+* inconsistent file structures
+* fragmented coordination outputs
+* poor data continuity from design to construction
+* limited usability of data in operations
+
+As a result, the promise of “digital twins” is often reduced to static models rather than living, usable systems.
+
+---
+
+**AOE’s Role**
+
+AOE addresses the missing layer in BIM workflows: **data infrastructure**.
+
+It ensures that:
+
+* all project data is structured consistently
+* deliverables are categorized and traceable
+* coordination outputs are organized and verifiable
+* information remains usable beyond project turnover
+
+AOE introduces a controlled interface that allows teams to:
+
+* observe project data clearly
+* validate structure and organization
+* correct issues in a transparent and predictable way
+
+This creates a reliable foundation for long-term data use.
+
+---
+
+**Digital Twin Readiness**
+
+A true digital twin is not just a model—it is a **continuously usable, structured dataset** that supports operations, maintenance, and decision-making.
+
+AOE positions Akribes to deliver this by:
+
+* preserving structured data from day one
+* maintaining consistency across all project phases
+* enabling traceable, organized outputs
+* preparing data for integration into operational systems
+
+Rather than retrofitting data at the end of a project, AOE ensures that **digital twin readiness is built into the process from the beginning**.
+
+---
+
+**Strategic Advantage**
+
+As digital twins become more common, the differentiator will not be who can model—but who can **manage and deliver usable data at scale**.
+
+AOE provides Akribes with:
+
+* a repeatable, standardized workflow across projects
+* a foundation for scalable automation and agent-assisted processes
+* a system that supports both current BIM needs and future digital twin requirements
+
+This allows Akribes to operate not just as a modeling or coordination service, but as a **data-driven project partner**.
+
+---
+
+**Looking Forward**
+
+The next phase of AOE focuses on:
+
+* controlled ingestion of external data
+* strengthening data integrity at the point of entry
+* enabling agent-assisted workflows within defined rules
+
+As the industry evolves, AOE will serve as the backbone for integrating:
+
+* BIM coordination outputs
+* estimating and cost data
+* field information and as-built conditions
+* operational and asset data
+
+---
+
+**Summary**
+
+AOE ensures that project data is not only created—but **structured, validated, and preserved in a way that makes it usable long after design and construction are complete**.
+
+This positions Akribes to lead in the transition from BIM deliverables to true digital twin systems.
