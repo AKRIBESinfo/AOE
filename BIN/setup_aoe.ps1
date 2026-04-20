@@ -34,7 +34,8 @@ attrib +h C:\AK\BIN
 attrib +h C:\AK\LOG
 
 $WshShell = New-Object -ComObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Akribes Projects.lnk")
+$DesktopPath = [Environment]::GetFolderPath("Desktop")
+$Shortcut = $WshShell.CreateShortcut("$DesktopPath\Akribes Projects.lnk")
 $Shortcut.TargetPath = "C:\AK\PRJ"
 $Shortcut.Save()
 
